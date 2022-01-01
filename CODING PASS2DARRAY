@@ -1,0 +1,46 @@
+package twoDimensional;
+import java.util.Scanner;
+public class PassTwoDimensionalArray {
+
+	public static void main(String[] args) {
+		int[][] x = getArray(); //Get Array
+		
+		//Display sum of all elements
+		System.out.println("\nSum of all elements is " + total(x));
+	}	
+	
+	private static String total(int[][] x) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static int [][] getArray() {
+		//Create a Scanner
+		Scanner sc = new Scanner (System.in);
+		
+		//Enter array values
+		int [][] x = new int [3][4];
+		int y;
+		int z;
+		System.out.println("Enter " + x.length + " rows and " + x[0].length + " columns: ");
+		for (y=0;y<x.length;y++) {
+			for (z=0;z<x.length;z++) {
+		x[y][z]=sc.nextInt();
+		
+		}
+
+	}
+		return x;
+	}
+	public static int sum (int [][] x) {
+		int sum =0;
+		int row;
+		int column;
+		for (row=0; row<x.length;row++) {
+			for (column=0; column<x.length;column++) {
+				sum += x[row][column];
+			}
+		}
+		return sum;
+	}
+}
