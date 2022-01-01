@@ -1,0 +1,45 @@
+package selfProgramming;
+
+public class Equality {
+
+		public	static void  equality_checking_two_arrays(int[] sizes_A, int[] sizes_B)
+			  {
+			  boolean  test = true;
+			  
+			  if(sizes_A.length == sizes_B.length)
+			  {
+			  for (int i  = 0; i < sizes_A.length; i++)
+			  {
+			  if(sizes_A[i] != sizes_B[i])
+			  {
+			  test = false;
+			  }
+			  }
+			  }
+			  else
+			  {
+			  test  = false;
+			  }
+			  
+			  if  (test)
+			  {
+			  System.out.println("Both set have equal sizes :)");
+			  }
+			  else
+			  {
+			  System.out.println("Both set have different sizes :(");
+			  }
+			  }
+			  
+			  public static void  main(String[] args)
+			  {
+			  int[] sizes1 =  {30, 38, 31, 28, 25};
+			  int[] sizes2 =  {20, 30, 25, 25, 28};
+			  int[] sizes3 =  {30, 38, 31, 28, 25};
+			  
+			  equality_checking_two_arrays(sizes1,  sizes3);
+			  equality_checking_two_arrays(sizes2, sizes3);
+			 
+			  }
+		 }
+
