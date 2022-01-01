@@ -1,0 +1,61 @@
+package twoDimensional;
+import java.util.Scanner;
+public class CheckSudokuSolution {
+
+	public static void main(String[] args) {
+		//Create a Scanner
+		Scanner sc = new Scanner (System.in);
+		
+		//Read a Sudoku solution
+		int[][] grid = new int [9][9];
+		int x;
+		int y;
+		
+		System.out.println("Enter a Soduko puzzle solution: ");
+		for(x=0; x<grid.length;x++) {
+			for(y=0;y<grid.length;y++) {
+				grid[x][y]=sc.nextInt();			
+			}
+		}
+		}
+	/** Check whether a solution is valid **/	
+		public static boolean isValid(int[][]grid) {
+			{
+			int y;
+			for (int x = 0;x<9;x++) 
+				for(y=0;y<9;y++) 
+					if (grid [x][y]<1||grid[x][y]>9 ||!isValid1(x,y,grid))
+				return false;
+			return true; //The solution is valid	
+		}
+		}
+private static boolean isValid1(int x, int y, int[][] grid) {
+		// TODO Auto-generated method stub
+		return false;
+	
+}
+			
+	
+	//Check whether grid[x][y] is valid in the grid
+	public static boolean isValid (int x, int y, int [][] grid) {
+	
+	//Check whether grid [x][y] is unique in x's row
+		for (int column=0;column<9;column++)
+			if (column != y && grid[x][column] == grid[x][y] )
+				return false;
+	//Check whether [x][y] is unique in y's column
+		for (int row=0; row<9;row++)
+			if(row != x && grid[row][y] == grid[x][y])
+				return false;
+		
+	int j = 0;
+		//Check whether grid[x][y] is unique in the 3-by-3 box 
+		for (int row = (x/3) * 3; row < (x/3) * 3 + 3; row++)
+			for (int col = (y/3) * 3; col < (j/3) * 3 + 3; col++)
+				if (! (row == x && col == y) && grid[row][col] == grid[x][y])
+					return false;
+		return true; //The current value at the grid [x][y] is valid
+		
+	}
+
+}
