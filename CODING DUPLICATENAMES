@@ -1,0 +1,20 @@
+package selfProgramming;
+
+public class DuplicateNames {
+
+	public static void main(String[] args) {
+		String [] names = {"Ain","Ren","Bright","Farah","Ain","MJ","Kimmy","Farah"};
+		
+		int i;
+		int j;
+		
+		for(i=0;i<names.length-1;i++) {
+			for(j=0;j<names.length;j++) {
+				if ((names[i].equals(names[j])) && (i != j)) {
+			System.out.println("Duplicate Element is : " + names[j]);
+			
+			}
+		  }
+		}
+      }
+    }
