@@ -1,0 +1,31 @@
+package selfProgramming;
+import java.util.ArrayList;
+public class ArrayListFruit {
+
+	public static void main(String[] args) {
+		
+		String [] fruits = new String [5];
+		
+		System.out.print("Pack A");
+		fruits[0] = "Rambutan";
+		fruits[1] ="Durian";
+		fruits[2] ="Mango";
+		fruits[3] ="Apple";
+		fruits[4] ="Strawberry";
+		System.out.println(fruits);
+	
+		System.out.println();
+		
+		System.out.print("Pack B");
+		ArrayList fruitList = new ArrayList();
+		fruitList.add("Rambutan");
+		fruitList.add("Durian");
+		fruitList.add("Mango");
+		fruitList.add("Apple");
+		System.out.println(fruitList);
+		
+	
+
+	}
+
+}
